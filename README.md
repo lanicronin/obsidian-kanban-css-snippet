@@ -11,10 +11,10 @@ Inspiration from modern kanban apps.
 - Dark mode/Light mode compatibility
 
 ### Light Mode:
+![lightmode](lightmode.png)
 
-![[Pasted image 20220815213040.png]]
 ### Dark Mode:
-![[Pasted image 20220815213009.png]]
+![darkmode](darkmode.png)
 
 ## How to customise the snippet:
 
