@@ -1,9 +1,7 @@
-# obsidian-kanban-css-snippet
-A CSS snippet to enhance the Obsidian Kanban plugin (https://github.com/mgmeyers/obsidian-kanban)
-
 # Obsidian CSS Snippet -  Kanban Board 
 
-This CSS snippet will allow a nice and simple design for your kanban board!
+A CSS snippet to enhance the Obsidian Kanban plugin (https://github.com/mgmeyers/obsidian-kanban)
+This CSS snippet will allow a nice and simple design for your kanban board! 
 
 Inspiration from modern kanban apps.
 
