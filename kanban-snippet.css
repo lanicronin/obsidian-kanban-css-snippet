@@ -1,0 +1,164 @@
+/* -------------------------------------- */
+/*-------- Customise Kanban board --------*/
+/* -------------------------------------- */
+
+/* Identify Colours */
+.theme-light {
+    --kban-background: 255,255,255;
+    --kban-col-inbox: 255, 170, 0;
+    --kban-col-inbox-light: rgba(var(--kban-col-inbox), 0.4);
+    --kban-col-open: 162, 121, 242;
+    --kban-col-open-light: rgba(var(--kban-col-open), 0.4);
+    --kban-col-inprogress: 43, 217, 217;
+    --kban-col-inprogress-light: rgba(var(--kban-col-inprogress), 0.4);
+    --kban-col-completed: 61, 204, 61;
+    --kban-col-completed-light: rgba(var(--kban-col-completed), 0.4);
+    --kban-background-odd: 247, 249, 250;
+    --kban-background-even: 237, 241, 242;
+    --kban-card-background: 255,255,255;
+}
+.theme-dark {
+    --kban-background: 28,27,32;
+    --kban-col-inbox: 255, 170, 0;
+    --kban-col-inbox-light: rgba(var(--kban-col-inbox), 0.4);
+    --kban-col-open: 162, 121, 242;
+    --kban-col-open-light: rgba(var(--kban-col-open), 0.4);
+    --kban-col-inprogress: 43, 217, 217;
+    --kban-col-inprogress-light: rgba(var(--kban-col-inprogress), 0.4);
+    --kban-col-completed: 61, 204, 61;
+    --kban-col-completed-light: rgba(var(--kban-col-completed), 0.4);
+    --kban-background-odd: 49,48,53;
+    --kban-background-even: 49,48,53;
+    --kban-card-background: 54,53,58;
+}
+
+
+/* background of entire page */
+.kanban-plugin__board {
+    background-color: var(--kban-background);
+}
+
+/* border separators and radius */
+.kanban-plugin__board .kanban-plugin__lane-wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+body .kanban-plugin__lane-items, body .kanban-plugin__item-button-wrapper {
+    border-radius: 0;
+    border-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* change padding on items */
+.kanban-plugin__lane-items .kanban-plugin__item-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--kban-card-background);
+}
+body .kanban-plugin__lane-wrapper .kanban-plugin__lane-items .kanban-plugin__item-wrapper {
+    filter: drop-shadow(0px 0px 10px var(--kban-background));
+}
+.kanban-plugin__placeholder {
+    margin-bottom: 6px;
+}
+
+
+/* background of columns */
+body .kanban-plugin__lane-wrapper:nth-child(odd) .kanban-plugin__lane-items,
+body .kanban-plugin__lane-wrapper:nth-child(odd) .kanban-plugin__item-button-wrapper {
+    background-color: rgb(var(--kban-background-odd));
+}
+body .kanban-plugin__lane-wrapper:nth-child(even) .kanban-plugin__lane-items,
+body .kanban-plugin__lane-wrapper:nth-child(even) .kanban-plugin__item-button-wrapper {
+    background-color: rgb(var(--kban-background-even));
+}
+
+/* background of cards and shadow */
+body .kanban-plugin__item-wrapper, body .kanban-plugin__item-title-wrapper {
+    background-color: var(--kban-card-background);
+}
+body .kanban-plugin__item {
+    border-radius: 10px;
+    border-color: var(--kban-card-background);
+}
+body .kanban-plugin__item-wrapper {
+    background-color: var(--kban-card-background);
+    border-color: var(--kban-card-background);
+}
+.kanban-plugin__lane-items>.kanban-plugin__item-wrapper {
+    margin-top: 6px;
+}
+
+
+.kanban-plugin__board .kanban-plugin__lane-wrapper:nth-child(odd) {
+    background-color: rgb(var(--kban-background-odd));
+}
+.kanban-plugin__board .kanban-plugin__lane-wrapper:nth-child(even) {
+    background-color: rgb(var(--kban-background-even));
+}
+
+/* Counter and lane grip*/
+.kanban-plugin__lane-header-wrapper > .kanban-plugin__lane-grip,
+.kanban-plugin__lane-header-wrapper > .kanban-plugin__lane-title p,
+.kanban-plugin__lane-header-wrapper > .kanban-plugin__lane-title-count,
+.kanban-plugin__lane-header-wrapper .kanban-plugin__icon  {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* date colour */
+.kanban-plugin__item .kanban-plugin__item-metadata-date-relative {
+    color: #0070e0;
+}
+
+/*--------------------------*/
+/*      Lane Colours        */
+/*--------------------------*/
+
+/*------ Inbox lane ------*/
+.kanban-plugin__lane-wrapper:nth-last-child(5) .kanban-plugin__lane-header-wrapper  {
+    background-color: rgb(var(--kban-col-inbox));
+}
+.kanban-plugin__lane-wrapper:nth-last-child(5) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
+    background-color: var(--kban-col-inbox-light);
+}
+.kanban-plugin__lane-wrapper:nth-last-child(5) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+    background-color: rgb(var(--kban-col-inbox));
+}
+
+/*------ Open lane ------*/
+.kanban-plugin__lane-wrapper:nth-last-child(4) .kanban-plugin__lane-header-wrapper  {
+    background-color: rgb(var(--kban-col-open));
+}
+.kanban-plugin__lane-wrapper:nth-last-child(4) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
+    background-color: var(--kban-col-open-light);
+}
+.kanban-plugin__lane-wrapper:nth-last-child(4) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+    background-color: rgb(var(--kban-col-open));
+}
+
+/*------ In Progress lane ------*/
+.kanban-plugin__lane-wrapper:nth-last-child(3) .kanban-plugin__lane-header-wrapper  {
+    background-color: rgb(var(--kban-col-inprogress));
+}
+.kanban-plugin__lane-wrapper:nth-last-child(3) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
+    background-color: var(--kban-col-inprogress-light);
+}
+.kanban-plugin__lane-wrapper:nth-last-child(3) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+    background-color: rgb(var(--kban-col-inprogress));
+}
+
+/*------ Completed lane ------*/
+.kanban-plugin__board > div > .kanban-plugin__lane-wrapper:nth-last-child(2) .kanban-plugin__lane-header-wrapper  {
+    background-color: rgb(var(--kban-col-completed));
+}
+.kanban-plugin__board > div > .kanban-plugin__lane-wrapper:nth-last-child(2) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button {
+    background-color: var(--kban-col-completed-light);
+}
+.kanban-plugin__board > div > .kanban-plugin__lane-wrapper:nth-last-child(2) .kanban-plugin__item-button-wrapper .kanban-plugin__new-item-button:hover {
+    background-color: rgb(var(--kban-col-completed));
+}
+
